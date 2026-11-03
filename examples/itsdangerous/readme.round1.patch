@@ -1,0 +1,66 @@
+--- README.before.md	2026-11-03 02:26:21
++++ README.md	2026-11-03 02:26:21
+@@ -2,36 +2,42 @@
+ 
+ # ItsDangerous
+ 
+-... so better sign this
++Sign data with a secret key so you can hand it to an untrusted place (a cookie,
++a URL, an emailed link) and know it was not changed when it comes back.
+ 
+-Various helpers to pass data to untrusted environments and to get it
+-back safe and sound. Data is cryptographically signed to ensure that a
+-token has not been tampered with.
++[![PyPI](https://img.shields.io/pypi/v/itsdangerous)](https://pypi.org/project/itsdangerous/)
++[![Python](https://img.shields.io/pypi/pyversions/itsdangerous)](https://pypi.org/project/itsdangerous/)
++[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](LICENSE.txt)
++[![Tests](https://github.com/pallets/itsdangerous/actions/workflows/tests.yaml/badge.svg)](https://github.com/pallets/itsdangerous/actions/workflows/tests.yaml)
+ 
+-It's possible to customize how data is serialized. Data is compressed as
+-needed. A timestamp can be added and verified automatically while
+-loading a token.
++```bash
++pip install itsdangerous   # Python 3.10+
++```
+ 
++```python
++from itsdangerous import URLSafeSerializer, BadSignature
+ 
+-## A Simple Example
++s = URLSafeSerializer("secret key", salt="auth")
++token = s.dumps({"id": 5, "name": "itsdangerous"})
++s.loads(token)          # {'id': 5, 'name': 'itsdangerous'}
++s.loads(token + "x")    # raises BadSignature: the token was changed
++```
+ 
+-Here's how you could generate a token for transmitting a user's id and
+-name between web requests.
++**Signed, not encrypted:** anyone can read the payload; nobody without the key can
++change it. Need expiry? Use `URLSafeTimedSerializer` and `loads(token, max_age=3600)`.
+ 
+-```python
+-from itsdangerous import URLSafeSerializer
+-auth_s = URLSafeSerializer("secret key", "auth")
+-token = auth_s.dumps({"id": 5, "name": "itsdangerous"})
++## How is this different from JWT?
+ 
+-print(token)
+-# eyJpZCI6NSwibmFtZSI6Iml0c2Rhbmdlcm91cyJ9.6YP6T0BaO67XP--9UzTrmurXSmg
++| | ItsDangerous | JWT (e.g. PyJWT) |
++|---|---|---|
++| Format | compact, URL-safe, Python-specific | cross-language standard |
++| Algorithm in the token | no (fixed by your code) | yes (`alg` header) |
++| Best for | cookies, reset/activation links inside one Python app | tokens shared between services or languages |
+ 
+-data = auth_s.loads(token)
+-print(data["name"])
+-# itsdangerous
+-```
++It's possible to customize how data is serialized. Data is compressed as
++needed. See the [documentation](https://itsdangerous.palletsprojects.com) for
++signers, key rotation and timed tokens.
+ 
+-
+ ## Donate
+ 
+ The Pallets organization develops and supports ItsDangerous and other

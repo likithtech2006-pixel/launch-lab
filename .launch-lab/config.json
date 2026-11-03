@@ -1,0 +1,11 @@
+{
+  "name": "launch-lab",
+  "github_repo": "likithtech2006-pixel/launch-lab",
+  "github": {
+    "description": "Test whether your open-source launch will work before you post: simulated first-time visitors, a clean install test and a 0-100 Star Readiness Score, as a Claude Code skill.",
+    "topics": ["claude-code", "claude-skills", "open-source", "readme", "launch", "github-stars", "developer-tools"]
+  },
+  "install": {
+    "success_cmd": "python3 ~/.claude/skills/launch-lab/scripts/scan.py --help >/dev/null && echo installed"
+  }
+}

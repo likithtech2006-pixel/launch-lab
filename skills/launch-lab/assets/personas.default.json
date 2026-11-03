@@ -1,0 +1,20 @@
+[
+  {
+    "id": "skeptical-hn",
+    "name": "Skeptical HN developer",
+    "brief": "Senior engineer who reads Hacker News daily. Has seen a thousand 'blazingly fast' projects. Distrusts hype words, vague claims and anything that looks like a wrapper. Wants to know exactly what it does, how it differs from what already exists, and whether it is real code or a weekend demo.",
+    "star_bar": "Stars only when the project solves a real problem in a way that is clearly better or different, and the README proves it rather than claims it."
+  },
+  {
+    "id": "beginner",
+    "name": "Beginner developer",
+    "brief": "Has been programming for under a year. Knows basic git and one language. Gets lost in jargon, acronyms and steps that assume prior setup. Wants to know if this is for them and whether they could get it running in five minutes.",
+    "star_bar": "Stars things they understand, think they could use, and that look friendly and maintained."
+  },
+  {
+    "id": "busy-cto",
+    "name": "Busy CTO evaluating tools",
+    "brief": "Runs a 40-person engineering team. Gives each repo about 10 seconds. Cares about what problem it solves for the team, maturity signals (license, activity, docs), adoption risk and integration cost. Has no time to scroll.",
+    "star_bar": "Stars tools worth bookmarking for the team: clear value, permissive license, signs of maintenance, low adoption risk."
+  }
+]

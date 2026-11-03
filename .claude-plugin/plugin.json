@@ -1,0 +1,21 @@
+{
+  "name": "launch-lab",
+  "version": "0.1.0",
+  "description": "Test whether your open-source launch will work before you post: stranger-panel README test, clean install test, Star Readiness Score, fix-and-retest loop, demo GIFs, launch drafts and post-launch star conversion diagnosis.",
+  "author": {
+    "name": "likithtech2006-pixel",
+    "url": "https://github.com/likithtech2006-pixel"
+  },
+  "homepage": "https://github.com/likithtech2006-pixel/launch-lab",
+  "repository": "https://github.com/likithtech2006-pixel/launch-lab",
+  "license": "MIT",
+  "keywords": [
+    "launch",
+    "readme",
+    "open-source",
+    "github-stars",
+    "show-hn",
+    "demo-gif",
+    "developer-marketing"
+  ]
+}

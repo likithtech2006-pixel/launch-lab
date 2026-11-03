@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+# Launch Lab state: keep config and the post-launch history, ignore regenerated scratch
+.launch-lab/*
+!.launch-lab/config.json
+!.launch-lab/history.json
+launch/demo/.rec-*

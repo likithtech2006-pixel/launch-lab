@@ -1,0 +1,455 @@
+[
+ {
+  "repo": "example/three-snapshots",
+  "fetched_at": "2026-10-07T09:00:00+00:00",
+  "stars_total": 0,
+  "views": {
+   "views": [
+    {
+     "timestamp": "2026-10-01T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-02T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-03T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-04T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-05T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-06T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-07T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    }
+   ]
+  },
+  "clones": {
+   "clones": []
+  },
+  "referrers": [
+   {
+    "referrer": "news.ycombinator.com",
+    "count": 130,
+    "uniques": 100
+   },
+   {
+    "referrer": "reddit.com",
+    "count": 65,
+    "uniques": 50
+   }
+  ],
+  "paths": [],
+  "stargazers": [],
+  "star_history_complete": true
+ },
+ {
+  "repo": "example/three-snapshots",
+  "fetched_at": "2026-10-14T09:00:00+00:00",
+  "stars_total": 30,
+  "views": {
+   "views": [
+    {
+     "timestamp": "2026-10-01T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-02T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-03T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-04T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-05T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-06T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-07T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-08T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-09T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-10T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-11T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-12T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-13T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-14T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    }
+   ]
+  },
+  "clones": {
+   "clones": []
+  },
+  "referrers": [
+   {
+    "referrer": "news.ycombinator.com",
+    "count": 156,
+    "uniques": 120
+   },
+   {
+    "referrer": "reddit.com",
+    "count": 455,
+    "uniques": 350
+   }
+  ],
+  "paths": [],
+  "stargazers": [
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   }
+  ],
+  "star_history_complete": true
+ },
+ {
+  "repo": "example/three-snapshots",
+  "fetched_at": "2026-10-21T09:00:00+00:00",
+  "stars_total": 35,
+  "views": {
+   "views": [
+    {
+     "timestamp": "2026-10-08T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-09T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-10T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-11T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-12T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-13T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-14T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-15T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-16T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-17T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-18T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-19T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-20T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    },
+    {
+     "timestamp": "2026-10-21T00:00:00Z",
+     "count": 70,
+     "uniques": 50
+    }
+   ]
+  },
+  "clones": {
+   "clones": []
+  },
+  "referrers": [
+   {
+    "referrer": "news.ycombinator.com",
+    "count": 936,
+    "uniques": 720
+   },
+   {
+    "referrer": "reddit.com",
+    "count": 468,
+    "uniques": 360
+   }
+  ],
+  "paths": [],
+  "stargazers": [
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-08T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-09T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-10T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-11T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-12T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-13T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-14T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-15T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-16T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-17T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-18T12:00:00Z"
+   },
+   {
+    "starred_at": "2026-10-19T12:00:00Z"
+   }
+  ],
+  "star_history_complete": true
+ }
+]

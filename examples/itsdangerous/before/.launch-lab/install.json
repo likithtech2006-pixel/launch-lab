@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-11-02T20:57:45+00:00",
+  "mode": "static",
+  "image": null,
+  "readme_sha": "a3e791c4af02a257",
+  "steps": [],
+  "friction": [
+    {
+      "type": "unclear_step",
+      "severity": "blocker",
+      "step": null,
+      "detail": "No runnable install commands found in shell code blocks",
+      "fix_hint": "Put install commands in ```bash code blocks under the Quickstart heading.",
+      "evidence": null
+    },
+    {
+      "type": "unclear_step",
+      "severity": "major",
+      "step": null,
+      "detail": "README has no Install / Quickstart / Getting started section",
+      "fix_hint": "Add a '## Quickstart' section with copy-pasteable commands near the top.",
+      "evidence": null
+    },
+    {
+      "type": "unstated_version",
+      "severity": "minor",
+      "step": null,
+      "detail": "Project requires python >=3.10 but the README never says so",
+      "fix_hint": "State the requirement in a Prerequisites line, e.g. 'python >=3.10'.",
+      "evidence": null
+    }
+  ],
+  "success": null,
+  "time_to_first_success_s": null,
+  "total_s": 0.0,
+  "measured": false,
+  "notes": []
+}

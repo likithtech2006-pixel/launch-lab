@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-11-02T20:56:38+00:00",
+  "mode": "static",
+  "image": null,
+  "readme_sha": "be52d677aafd3f57",
+  "steps": [
+    {
+      "n": 1,
+      "cmd": "pip install itsdangerous   # Python 3.10+",
+      "action": "run",
+      "notes": []
+    }
+  ],
+  "friction": [],
+  "success": null,
+  "time_to_first_success_s": null,
+  "total_s": 0.0,
+  "measured": false,
+  "notes": []
+}

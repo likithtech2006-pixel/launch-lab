@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-11-02T20:57:45+00:00",
+  "repo_root": "<itsdangerous checkout>-before",
+  "name": "itsdangerous",
+  "readme_path": "README.md",
+  "readme_lines": 50,
+  "readme_sha": "a3e791c4af02a257",
+  "fold": {
+    "lines": 25,
+    "markdown": "<div align=\"center\"><img src=\"https://raw.githubusercontent.com/pallets/itsdangerous/refs/heads/stable/docs/_static/itsdangerous-name.svg\" alt=\"\" height=\"150\"></div>\n\n# ItsDangerous\n\n... so better sign this\n\nVarious helpers to pass data to untrusted environments and to get it\nback safe and sound. Data is cryptographically signed to ensure that a\ntoken has not been tampered with.\n\nIt's possible to customize how data is serialized. Data is compressed as\nneeded. A timestamp can be added and verified automatically while\nloading a token.\n\n\n## A Simple Example\n\nHere's how you could generate a token for transmitting a user's id and\nname between web requests.\n\n```python\nfrom itsdangerous import URLSafeSerializer\nauth_s = URLSafeSerializer(\"secret key\", \"auth\")\ntoken = auth_s.dumps({\"id\": 5, \"name\": \"itsdangerous\"})\n",
+    "rendered": "[image: itsdangerous-name.svg]\n\n# ItsDangerous\n\n... so better sign this\n\nVarious helpers to pass data to untrusted environments and to get it\nback safe and sound. Data is cryptographically signed to ensure that a\ntoken has not been tampered with.\n\nIt's possible to customize how data is serialized. Data is compressed as\nneeded. A timestamp can be added and verified automatically while\nloading a token.\n\n## A Simple Example\n\nHere's how you could generate a token for transmitting a user's id and\nname between web requests.\n\n```python\nfrom itsdangerous import URLSafeSerializer\nauth_s = URLSafeSerializer(\"secret key\", \"auth\")\ntoken = auth_s.dumps({\"id\": 5, \"name\": \"itsdangerous\"})",
+    "title": "ItsDangerous",
+    "tagline": "... so better sign this",
+    "badges": [],
+    "first_image": {
+      "alt": "",
+      "src": "https://raw.githubusercontent.com/pallets/itsdangerous/refs/heads/stable/docs/_static/itsdangerous-name.svg",
+      "animated": false
+    },
+    "sha": "b877cefbe6617a43"
+  },
+  "repo_type": {
+    "type": "library",
+    "confidence": 1.0,
+    "scores": {
+      "cli": 0.0,
+      "tui": 0.0,
+      "web": 0.0,
+      "library": 5.0,
+      "skill": 0.0
+    },
+    "evidence": [
+      "library +3: package exports a library and no executables",
+      "library +2: README shows import/require usage"
+    ],
+    "demo_pipeline": "snippet"
+  },
+  "manifest": {
+    "languages": [
+      "python"
+    ],
+    "name": "itsdangerous",
+    "description": "Safely pass data to untrusted environments and back.",
+    "keywords": [],
+    "versions": {
+      "python": ">=3.10"
+    },
+    "bins": [],
+    "scripts": {},
+    "lib": true,
+    "dependency_count": 72
+  },
+  "quickstart": {
+    "section": null,
+    "section_line": null,
+    "section_lines": null,
+    "blocks": [],
+    "commands": [],
+    "command_count": 0
+  },
+  "signals": {
+    "license_file": "LICENSE.txt",
+    "contributing": null,
+    "code_of_conduct": null,
+    "changelog": null,
+    "badges_in_fold": 0,
+    "demo_media": [],
+    "demo_in_fold": false,
+    "image_in_fold": true,
+    "comparison": {
+      "present": false,
+      "heading": null,
+      "table": false
+    },
+    "contributing_section": true,
+    "has_faq": false,
+    "social_preview_file": null,
+    "env_vars": {
+      "found": {},
+      "env_example": null,
+      "undocumented": []
+    },
+    "versions_required": {
+      "python": ">=3.10"
+    },
+    "versions_stated_in_readme": {
+      "python": false,
+      "node": false,
+      "go": false,
+      "rust": false
+    }
+  },
+  "github": {
+    "slug": "pallets/itsdangerous",
+    "available": true,
+    "description": "Safely pass trusted data to untrusted environments and back.",
+    "topics": [
+      "python",
+      "security",
+      "hmac",
+      "serialization",
+      "itsdangerous",
+      "pallets"
+    ],
+    "homepage": "https://itsdangerous.palletsprojects.com",
+    "social_preview_custom": true,
+    "stars": 3140,
+    "source": "gh"
+  }
+}

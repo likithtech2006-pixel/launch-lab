@@ -1,0 +1,8 @@
+{
+  "name": "tinyretry",
+  "version": "1.2.0",
+  "description": "Retry async functions with exponential backoff",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": ["retry", "backoff", "async"]
+}

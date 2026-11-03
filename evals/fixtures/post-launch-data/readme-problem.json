@@ -1,0 +1,222 @@
+{
+ "repo": "example/readme-problem",
+ "fetched_at": "2026-10-21T09:00:00+00:00",
+ "stars_total": 14,
+ "views": {
+  "views": [
+   {
+    "timestamp": "2026-10-07T00:00:00Z",
+    "count": 154,
+    "uniques": 110
+   },
+   {
+    "timestamp": "2026-10-08T00:00:00Z",
+    "count": 182,
+    "uniques": 130
+   },
+   {
+    "timestamp": "2026-10-09T00:00:00Z",
+    "count": 175,
+    "uniques": 125
+   },
+   {
+    "timestamp": "2026-10-10T00:00:00Z",
+    "count": 196,
+    "uniques": 140
+   },
+   {
+    "timestamp": "2026-10-11T00:00:00Z",
+    "count": 165,
+    "uniques": 118
+   },
+   {
+    "timestamp": "2026-10-12T00:00:00Z",
+    "count": 170,
+    "uniques": 122
+   },
+   {
+    "timestamp": "2026-10-13T00:00:00Z",
+    "count": 189,
+    "uniques": 135
+   },
+   {
+    "timestamp": "2026-10-14T00:00:00Z",
+    "count": 179,
+    "uniques": 128
+   },
+   {
+    "timestamp": "2026-10-15T00:00:00Z",
+    "count": 166,
+    "uniques": 119
+   },
+   {
+    "timestamp": "2026-10-16T00:00:00Z",
+    "count": 183,
+    "uniques": 131
+   },
+   {
+    "timestamp": "2026-10-17T00:00:00Z",
+    "count": 173,
+    "uniques": 124
+   },
+   {
+    "timestamp": "2026-10-18T00:00:00Z",
+    "count": 177,
+    "uniques": 127
+   },
+   {
+    "timestamp": "2026-10-19T00:00:00Z",
+    "count": 186,
+    "uniques": 133
+   },
+   {
+    "timestamp": "2026-10-20T00:00:00Z",
+    "count": 169,
+    "uniques": 121
+   }
+  ]
+ },
+ "clones": {
+  "clones": [
+   {
+    "timestamp": "2026-10-07T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-08T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-09T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-10T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-11T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-12T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-13T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-14T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-15T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-16T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-17T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-18T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-19T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   },
+   {
+    "timestamp": "2026-10-20T00:00:00Z",
+    "count": 5,
+    "uniques": 5
+   }
+  ]
+ },
+ "referrers": [
+  {
+   "referrer": "news.ycombinator.com",
+   "count": 1170,
+   "uniques": 900
+  },
+  {
+   "referrer": "github.com",
+   "count": 650,
+   "uniques": 500
+  },
+  {
+   "referrer": "reddit.com",
+   "count": 390,
+   "uniques": 300
+  }
+ ],
+ "paths": [
+  {
+   "path": "/example/readme-problem",
+   "count": 100,
+   "uniques": 80
+  }
+ ],
+ "stargazers": [
+  {
+   "starred_at": "2026-10-07T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-09T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-09T11:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-10T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-11T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-13T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-14T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-14T11:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-15T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-17T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-18T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-19T10:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-19T11:00:00Z"
+  },
+  {
+   "starred_at": "2026-10-20T10:00:00Z"
+  }
+ ],
+ "star_history_complete": true
+}

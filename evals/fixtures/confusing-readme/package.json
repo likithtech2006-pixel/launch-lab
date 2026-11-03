@@ -1,0 +1,2 @@
+{ "name": "nexus-flow", "version": "0.9.0", "description": "Job queue with cron scheduling for Node.js", "main": "index.js",
+  "dependencies": { "ioredis": "5.4.0" } }

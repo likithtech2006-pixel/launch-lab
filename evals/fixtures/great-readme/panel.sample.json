@@ -1,0 +1,66 @@
+{
+ "round": 0,
+ "truth": {
+  "purpose": "A dependency-free shell script that prints a greeting line for a given name.",
+  "audience": "Shell users who want a tiny greeting command for scripts and CI logs.",
+  "derived_from": [
+   "README.md",
+   "greet.sh"
+  ]
+ },
+ "personas": [
+  {
+   "id": "skeptical-hn",
+   "name": "Skeptical HN developer",
+   "response": {
+    "what_it_does": "A tiny shell script that prints a greeting.",
+    "who_its_for": "People writing shell scripts",
+    "would_star": false,
+    "confidence": 60,
+    "confusions": [
+     "Why would I need a script for echo?"
+    ],
+    "would_make_me_star": "A real use case beyond echo"
+   },
+   "grade": {
+    "purpose_match": 1,
+    "audience_match": 1,
+    "notes": ""
+   }
+  },
+  {
+   "id": "beginner",
+   "name": "Beginner developer",
+   "response": {
+    "what_it_does": "Prints hello with your name in the terminal.",
+    "who_its_for": "Terminal users",
+    "would_star": true,
+    "confidence": 75,
+    "confusions": [],
+    "would_make_me_star": "Already clear"
+   },
+   "grade": {
+    "purpose_match": 1,
+    "audience_match": 0.5,
+    "notes": ""
+   }
+  },
+  {
+   "id": "busy-cto",
+   "name": "Busy CTO evaluating tools",
+   "response": {
+    "what_it_does": "One-line greeting script with no dependencies.",
+    "who_its_for": "Developers writing CI scripts",
+    "would_star": false,
+    "confidence": 70,
+    "confusions": [],
+    "would_make_me_star": "Nothing; not relevant for my team"
+   },
+   "grade": {
+    "purpose_match": 1,
+    "audience_match": 1,
+    "notes": ""
+   }
+  }
+ ]
+}

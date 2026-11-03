@@ -1,0 +1,128 @@
+{
+  "generated_at": "2026-11-02T20:56:38+00:00",
+  "repo_root": "<itsdangerous checkout>",
+  "name": "itsdangerous",
+  "readme_path": "README.md",
+  "readme_lines": 56,
+  "readme_sha": "be52d677aafd3f57",
+  "fold": {
+    "lines": 25,
+    "markdown": "<div align=\"center\"><img src=\"https://raw.githubusercontent.com/pallets/itsdangerous/refs/heads/stable/docs/_static/itsdangerous-name.svg\" alt=\"\" height=\"150\"></div>\n\n# ItsDangerous\n\nSign data with a secret key so you can hand it to an untrusted place (a cookie,\na URL, an emailed link) and know it was not changed when it comes back.\n\n[![PyPI](https://img.shields.io/pypi/v/itsdangerous)](https://pypi.org/project/itsdangerous/)\n[![Python](https://img.shields.io/pypi/pyversions/itsdangerous)](https://pypi.org/project/itsdangerous/)\n[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](LICENSE.txt)\n[![Tests](https://github.com/pallets/itsdangerous/actions/workflows/tests.yaml/badge.svg)](https://github.com/pallets/itsdangerous/actions/workflows/tests.yaml)\n\n```bash\npip install itsdangerous   # Python 3.10+\n```\n\n```python\nfrom itsdangerous import URLSafeSerializer, BadSignature\n\ns = URLSafeSerializer(\"secret key\", salt=\"auth\")\ntoken = s.dumps({\"id\": 5, \"name\": \"itsdangerous\"})\ns.loads(token)          # {'id': 5, 'name': 'itsdangerous'}\ns.loads(token + \"x\")    # raises BadSignature: the token was changed\n```\n",
+    "rendered": "[image: itsdangerous-name.svg]\n\n# ItsDangerous\n\nSign data with a secret key so you can hand it to an untrusted place (a cookie,\na URL, an emailed link) and know it was not changed when it comes back.\n\n[badge: PyPI]\n[badge: Python]\n[badge: License]\n[badge: Tests]\n\n```bash\npip install itsdangerous   # Python 3.10+\n```\n\n```python\nfrom itsdangerous import URLSafeSerializer, BadSignature\n\ns = URLSafeSerializer(\"secret key\", salt=\"auth\")\ntoken = s.dumps({\"id\": 5, \"name\": \"itsdangerous\"})\ns.loads(token)          # {'id': 5, 'name': 'itsdangerous'}\ns.loads(token + \"x\")    # raises BadSignature: the token was changed\n```",
+    "title": "ItsDangerous",
+    "tagline": "Sign data with a secret key so you can hand it to an untrusted place (a cookie,",
+    "badges": [
+      "PyPI",
+      "Python",
+      "License",
+      "Tests"
+    ],
+    "first_image": {
+      "alt": "",
+      "src": "https://raw.githubusercontent.com/pallets/itsdangerous/refs/heads/stable/docs/_static/itsdangerous-name.svg",
+      "animated": false
+    },
+    "sha": "9a22545ac4ca356e"
+  },
+  "repo_type": {
+    "type": "library",
+    "confidence": 1.0,
+    "scores": {
+      "cli": 0.0,
+      "tui": 0.0,
+      "web": 0.0,
+      "library": 5.0,
+      "skill": 0.0
+    },
+    "evidence": [
+      "library +3: package exports a library and no executables",
+      "library +2: README shows import/require usage"
+    ],
+    "demo_pipeline": "snippet"
+  },
+  "manifest": {
+    "languages": [
+      "python"
+    ],
+    "name": "itsdangerous",
+    "description": "Safely pass data to untrusted environments and back.",
+    "keywords": [],
+    "versions": {
+      "python": ">=3.10"
+    },
+    "bins": [],
+    "scripts": {},
+    "lib": true,
+    "dependency_count": 72
+  },
+  "quickstart": {
+    "section": "(top of README, no heading)",
+    "section_line": 13,
+    "section_lines": null,
+    "blocks": [
+      {
+        "lang": "bash",
+        "body": "pip install itsdangerous   # Python 3.10+",
+        "line": 13,
+        "heading": "ItsDangerous",
+        "shell": true,
+        "commands": [
+          "pip install itsdangerous   # Python 3.10+"
+        ]
+      }
+    ],
+    "commands": [
+      "pip install itsdangerous   # Python 3.10+"
+    ],
+    "command_count": 1
+  },
+  "signals": {
+    "license_file": "LICENSE.txt",
+    "contributing": null,
+    "code_of_conduct": null,
+    "changelog": null,
+    "badges_in_fold": 4,
+    "demo_media": [],
+    "demo_in_fold": false,
+    "image_in_fold": true,
+    "comparison": {
+      "present": true,
+      "heading": "How is this different from JWT?",
+      "table": true
+    },
+    "contributing_section": true,
+    "has_faq": false,
+    "social_preview_file": null,
+    "env_vars": {
+      "found": {},
+      "env_example": null,
+      "undocumented": []
+    },
+    "versions_required": {
+      "python": ">=3.10"
+    },
+    "versions_stated_in_readme": {
+      "python": true,
+      "node": false,
+      "go": false,
+      "rust": false
+    }
+  },
+  "github": {
+    "slug": "pallets/itsdangerous",
+    "available": true,
+    "description": "Safely pass trusted data to untrusted environments and back.",
+    "topics": [
+      "python",
+      "security",
+      "hmac",
+      "serialization",
+      "itsdangerous",
+      "pallets"
+    ],
+    "homepage": "https://itsdangerous.palletsprojects.com",
+    "social_preview_custom": true,
+    "stars": 3140,
+    "source": "gh"
+  }
+}

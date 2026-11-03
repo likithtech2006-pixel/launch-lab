@@ -1,0 +1,146 @@
+{
+  "skill_name": "launch-lab",
+  "description": "End-to-end scenarios for the launch-lab skill. Each runs Claude with the skill on a fixture repo copied to a temp dir. Deterministic script behaviour is covered separately by tests/test_scripts.py.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "cli-repo-full-pipeline",
+      "prompt": "/launch-lab",
+      "files": ["evals/fixtures/cli-repo"],
+      "expected_output": "Scans the repo as a CLI, runs a 3-persona Stranger Panel on the fold only, shows the install dry-run plan and asks before running it on the host (no Docker), scores it, proposes README fixes as a diff without applying them, plans a VHS or text_gif demo for `csvpeek`, and writes drafts to launch/.",
+      "expectations": [
+        ".launch-lab/scan.json has repo_type.type == \"cli\"",
+        ".launch-lab/panel.json exists, has >= 3 personas, and truth.purpose mentions previewing CSV files",
+        "Each persona subagent prompt contained only the above-the-fold text (no file paths, no source code)",
+        "Without Docker, the assistant showed the install command list and asked for approval before any --mode local run",
+        "launch/report.md contains a score, a category table and a numbered 'Top 5 fixes' list",
+        "README.md is unchanged unless the user approved a diff",
+        "No file outside launch/ and .launch-lab/ was created or modified without approval",
+        "The final message lists the score, open fixes and written file paths"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "web-app-demo",
+      "prompt": "make a demo gif for this repo",
+      "files": ["evals/fixtures/web-app"],
+      "expected_output": "Detects a Next.js web app and plans the Playwright pipeline: writes launch/demo/scenario.json with start.command 'npm run dev' and wait_for http://localhost:3000, explains how to install Playwright and ffmpeg if missing, and offers the text_gif fallback only for terminal content. Never fakes UI output.",
+      "expectations": [
+        "repo type detected as web",
+        "launch/demo/scenario.json exists with a url or start.wait_for of http://localhost:3000",
+        "Mentions gif_optimize.sh and the size budget (5 MB default, GitHub's 10 MB image limit)",
+        "If Playwright or ffmpeg are missing, says which one and how to install it instead of claiming a GIF was produced"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "library-snippet-demo",
+      "prompt": "/launch-lab demo",
+      "files": ["evals/fixtures/library"],
+      "expected_output": "Detects a library, writes a minimal runnable example using retry(), runs it to capture real output, saves launch/demo/snippet.json, and either records assets/snippet.html with Playwright or renders a text_gif fallback.",
+      "expectations": [
+        "repo type detected as library",
+        "launch/demo/snippet.json (or scene.json) contains code that imports tinyretry's retry",
+        "The output shown in the demo came from actually running the snippet, not invented text",
+        "A reproducible source file is saved in launch/demo/"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "broken-install",
+      "prompt": "/launch-lab install",
+      "files": ["evals/fixtures/broken-install"],
+      "expected_output": "Shows the dry-run plan; the `python bot.py --city \"<your-city>\"` step is flagged as unclear (placeholder). Static or approved local run reports undocumented WEATHER_API_KEY and SLACK_BOT_TOKEN, unstated Python >= 3.11, and (if run) the missing slack_sdk dependency.",
+      "expectations": [
+        "Friction includes undocumented_env_var for WEATHER_API_KEY",
+        "Friction includes unstated_version for python >=3.11",
+        "Friction includes an unclear_step for the <your-city> placeholder",
+        "If a local run happened, it was only after explicit user approval and the missing slack_sdk module was reported as a blocker",
+        "Each friction point comes with a concrete README fix"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "confusing-readme-panel",
+      "prompt": "/launch-lab panel",
+      "files": ["evals/fixtures/confusing-readme"],
+      "expected_output": "The truth (derived from package.json and index.js) is 'a Redis-backed job queue with cron scheduling for Node.js'. Personas, seeing only the buzzword fold, fail to identify it; the grades mark purpose_match 0 for most personas and the report quotes the 'synergy-driven paradigm' tagline as the misleading line.",
+      "expectations": [
+        "truth.purpose mentions a job queue (or scheduler) backed by Redis",
+        "truth was written before persona answers were read",
+        "At least 2 of 3 personas have purpose_match 0 (clarity failures)",
+        "The summary quotes the tagline line that misled them",
+        "Suggests a concrete replacement tagline naming 'job queue' and Node.js"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "great-readme-score",
+      "prompt": "/launch-lab score",
+      "files": ["evals/fixtures/great-readme"],
+      "expected_output": "Scores high (>= 80 once panel and install are measured). Demo, quickstart, license, contributing and comparison score full. Remaining fixes are small (upload the social preview image that already exists in .github/, GitHub topics). Does not invent problems.",
+      "expectations": [
+        "Demo, quickstart, comparison and contributing categories at full points",
+        "Social preview fix points at .github/social-preview.png and GitHub Settings",
+        "If panel/install were not run, the score is labelled provisional and the unmeasured categories are named",
+        "Does not recommend rewriting the tagline when the panel understood it"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "no-demo-fix-loop",
+      "prompt": "/launch-lab score then fix the README",
+      "files": ["evals/fixtures/no-demo"],
+      "expected_output": "Top fix is a demo GIF above the fold, then a comparison table and CONTRIBUTING.md. Writes launch/readme.round1.patch as a unified diff, asks for approval before applying, re-scans, re-runs the panel with new subagents and shows before -> after per category. Stops at 3 rounds or when the user is satisfied.",
+      "expectations": [
+        "Top fix is the demo (Demo category, +10 pts)",
+        "A unified diff is shown before any README change",
+        "README.md changes only after explicit approval",
+        "After applying, score.py is run with --before .launch-lab/score.round0.json and a before/after table is shown",
+        "The retest uses fresh persona subagents",
+        "No more than 3 fix rounds"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "post-launch-readme-problem",
+      "prompt": "I launched last week, lots of visitors but few stars. why?",
+      "files": ["evals/fixtures/post-launch-data/readme-problem.json"],
+      "expected_output": "Runs github_metrics.py --from-file on the data, reports ~126 uniques/day at ~0.8% conversion, diagnoses a README / first-impression problem, names news.ycombinator.com as the top referrer, and offers to run the Stranger Panel. Notes per-referrer conversion needs more snapshots.",
+      "expectations": [
+        "Diagnosis is 'readme'",
+        "Quotes the conversion rate from the data (about 0.8%)",
+        "Explains that per-referrer conversion is not available from a single snapshot",
+        "Next actions are specific (panel, demo above the fold, tailor first line to HN) rather than generic",
+        "Does not suggest buying stars, vote rings or spam"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "post-launch-spike",
+      "prompt": "/launch-lab diagnose",
+      "files": ["evals/fixtures/post-launch-data/spike-then-flat.json"],
+      "expected_output": "Diagnoses 'retention': a 2100-unique spike on 2026-10-09 then decay, with almost no stars after the spike. Recommends a follow-up content plan (release notes post, tutorial, FAQ from launch questions, good first issues, a second launch angle later).",
+      "expectations": [
+        "Diagnosis primary is 'retention'",
+        "Mentions the spike date and size",
+        "Recommends retention content, not another identical repost"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "launch-posts-honesty",
+      "prompt": "/launch-lab posts",
+      "files": ["evals/fixtures/cli-repo"],
+      "expected_output": "Writes launch/show-hn.md (3 title options, maker comment, likely questions with factual answers), reddit.md (subreddit-specific variants), x-thread.md, linkedin.md, devto.md, product-hunt.md and a 14-day calendar.md. Unknown facts become [TODO: ...]. Nothing is posted.",
+      "expectations": [
+        "All 7 files exist in launch/",
+        "No banned hype words (revolutionary, game-changer, blazingly, 10x, seamless, supercharge)",
+        "No invented users, testimonials, star counts or benchmark numbers; the 'milliseconds on multi-GB files' claim is either attributed to the README or marked [TODO: verify]",
+        "Show HN titles are <= 80 chars with no emoji",
+        "Reddit drafts differ per subreddit",
+        "The final message says nothing was posted"
+      ]
+    }
+  ]
+}

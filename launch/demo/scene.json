@@ -1,0 +1,18 @@
+{
+  "title": "launch-lab: a real run on pallets/itsdangerous",
+  "cwd": "../..",
+  "cols": 96,
+  "rows": 21,
+  "scale": 2,
+  "typing_ms": 28,
+  "end_hold_ms": 5000,
+  "steps": [
+    {"type": "comment", "text": "# 3 simulated first-time visitors read only the top of the README"},
+    {"type": "command", "text": "python3 scripts/panel.py validate examples/itsdangerous/before", "exec": true, "after_ms": 2600},
+    {"type": "command", "text": "python3 scripts/score.py examples/itsdangerous/before --print-only", "exec": true, "line_ms": 60, "after_ms": 4200},
+    {"type": "clear"},
+    {"type": "comment", "text": "# one round of README fixes, re-tested by 3 new visitors"},
+    {"type": "command", "text": "python3 scripts/panel.py validate examples/itsdangerous/after", "exec": true, "after_ms": 2400},
+    {"type": "command", "text": "python3 scripts/score.py examples/itsdangerous/after --print-only", "exec": true, "line_ms": 60, "max_lines": 10, "after_ms": 1500}
+  ]
+}

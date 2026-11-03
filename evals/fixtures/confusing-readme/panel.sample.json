@@ -1,0 +1,74 @@
+{
+ "round": 0,
+ "truth": {
+  "purpose": "A Redis-backed job queue with cron scheduling for Node.js.",
+  "audience": "Node.js backend developers who need scheduled background jobs.",
+  "derived_from": [
+   "package.json",
+   "index.js"
+  ]
+ },
+ "personas": [
+  {
+   "id": "skeptical-hn",
+   "name": "Skeptical HN developer",
+   "response": {
+    "what_it_does": "Some kind of AI workflow orchestration framework; impossible to tell.",
+    "who_its_for": "Unclear, maybe enterprise AI teams",
+    "would_star": false,
+    "confidence": 90,
+    "confusions": [
+     "Every sentence is buzzwords",
+     "No code example",
+     "Installation says 'see the docs'"
+    ],
+    "would_make_me_star": "One sentence saying what it actually does and a code example"
+   },
+   "grade": {
+    "purpose_match": 0,
+    "audience_match": 0,
+    "notes": "Tagline 'synergy-driven paradigm for composable intelligent workflows' hides that it is a job queue."
+   }
+  },
+  {
+   "id": "beginner",
+   "name": "Beginner developer",
+   "response": {
+    "what_it_does": "An AI tool for building workflows.",
+    "who_its_for": "AI developers",
+    "would_star": false,
+    "confidence": 80,
+    "confusions": [
+     "What is an event-mesh?",
+     "How do I install it?"
+    ],
+    "would_make_me_star": "A simple example I can copy"
+   },
+   "grade": {
+    "purpose_match": 0,
+    "audience_match": 0,
+    "notes": "Read 'AI-native' as the core feature."
+   }
+  },
+  {
+   "id": "busy-cto",
+   "name": "Busy CTO evaluating tools",
+   "response": {
+    "what_it_does": "An orchestration platform, details unknown.",
+    "who_its_for": "Platform teams",
+    "would_star": false,
+    "confidence": 85,
+    "confusions": [
+     "No license visible",
+     "8 badges, no substance"
+    ],
+    "would_make_me_star": "Clear problem statement and maturity info"
+   },
+   "grade": {
+    "purpose_match": 0,
+    "audience_match": 0.5,
+    "notes": ""
+   }
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "launch-lab",
+  "owner": {
+    "name": "likithtech2006-pixel",
+    "url": "https://github.com/likithtech2006-pixel"
+  },
+  "metadata": {
+    "description": "Launch Lab: test your open-source launch before you post.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "launch-lab",
+      "source": "./",
+      "description": "Stranger panel, clean install test, Star Readiness Score, demo GIFs, launch drafts and post-launch star conversion diagnosis.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["launch", "readme", "github-stars", "demo-gif"]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "pinboard-lite",
+  "version": "0.3.0",
+  "description": "Self-hosted bookmark board for small teams",
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "dependencies": { "next": "15.0.0", "react": "19.0.0", "react-dom": "19.0.0" }
+}
