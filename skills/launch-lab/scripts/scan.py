@@ -246,7 +246,7 @@ def detect_type(root: Path, man: dict, readme: str) -> dict:
 def find_file(root: Path, patterns: list[str]) -> str | None:
     for pat in patterns:
         for p in root.glob(pat):
-            if p.is_file():
+            if p.is_file() and not (NON_PRODUCT_DIRS - {"docs"}) & set(p.relative_to(root).parts[:-1]):
                 return str(p.relative_to(root))
     return None
 
@@ -375,7 +375,7 @@ def main() -> int:
     fold = extract_fold(readme, n)
     demo_imgs = [i for i in all_imgs if i["animated"] and not i["badge"]]
     social_file = find_file(root, [".github/social-preview.*", "social-preview.*", "assets/social*", "docs/social*",
-                                   ".github/og*", "assets/og*", "**/social-preview.png"])
+                                   ".github/og*", "assets/og*", "docs/og*"])
 
     scan = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

@@ -76,6 +76,12 @@ class TestScan(FixtureCase):
         run("scan.py", tests_dir.parent, "--offline")
         scan = json.loads((tests_dir.parent / ".launch-lab" / "scan.json").read_text())
         self.assertNotIn("FIXTURE_ONLY_TOKEN", scan["signals"]["env_vars"]["found"])
+        nested = tests_dir / "fixtures" / "x" / ".github"
+        nested.mkdir(parents=True)
+        (nested / "social-preview.png").write_bytes(b"PNG")
+        run("scan.py", tests_dir.parent, "--offline")
+        scan = json.loads((tests_dir.parent / ".launch-lab" / "scan.json").read_text())
+        self.assertIsNone(scan["signals"]["social_preview_file"])  # a fixture's image is not ours
         _, nodemo = self.scan("no-demo")
         self.assertFalse(nodemo["signals"]["demo_media"])
 

@@ -2,34 +2,31 @@
 
 <p align="center"><b>Other tools write your launch. Launch Lab tests whether it will work, before you post.</b></p>
 
-<p align="center">
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT"></a>
-<a href="https://github.com/likithtech2006-pixel/launch-lab/actions/workflows/tests.yml"><img src="https://github.com/likithtech2006-pixel/launch-lab/actions/workflows/tests.yml/badge.svg" alt="tests"></a>
-<img src="https://img.shields.io/badge/Claude%20Code-plugin-d97757" alt="Claude Code plugin">
-<img src="https://img.shields.io/badge/python-3.9%2B%2C%20stdlib%20only-3776ab" alt="Python 3.9+, stdlib only">
-</p>
+<p align="center"><a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT"></a> <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0-informational" alt="version 0.1.0"></a> <img src="https://img.shields.io/badge/Claude%20Code-plugin-d97757" alt="Claude Code plugin"> <img src="https://img.shields.io/badge/tests-17%20passing-brightgreen" alt="17 tests passing"></p>
 
-<p align="center"><img src="launch/demo/demo.gif" alt="Terminal demo: three simulated visitors read the top of the itsdangerous README and the repo scores 60/100; after one round of README fixes it scores 83/100" width="800"></p>
+<p align="center"><img src="launch/demo/demo.gif" alt="Terminal demo of a real run on pallets/itsdangerous, the Flask team's token-signing library: 3 simulated visitors understood it but none would star it, score 60/100; after one README fix round, 83/100" width="800"></p>
 
-A Claude Code skill that checks your GitHub repo the way a stranger would. Three simulated visitors read only the top of your README and say what they think it does and whether they would star it. A clean environment follows your install steps exactly as written. Both feed a **0-100 Star Readiness Score** with the five fixes worth the most points. Then it re-tests after your fixes, makes the demo GIF, drafts the launch posts, and after launch tells you whether few stars means a README problem or a reach problem.
+**What it does:** a Claude Code skill that shows your GitHub repo to three simulated first-time visitors (they see only the top of your README), runs your install steps exactly as written, and turns both into a 0-100 Star Readiness Score with the five fixes worth the most points. Then it tests again after you fix things.
+
+**What it is not:** a star predictor. The score is a published, weighted checklist computed by plain Python (stdlib, 17 tests) plus the visitors' answers; only the visitors' reading uses Claude. **You need:** Claude Code. No API keys, no paid services. Your install commands run in Docker, or in a temp folder on your machine only after you approve the exact list.
+
+Also included: demo GIFs, launch post drafts and post-launch star diagnosis.
 
 ## Install (10 seconds)
-
-In Claude Code:
 
 ```
 /plugin marketplace add likithtech2006-pixel/launch-lab
 /plugin install launch-lab@launch-lab
 ```
 
-Or copy the skill by hand:
+Then open Claude Code in any repo and run `/launch-lab`. Without the plugin system, see [manual install](#manual-install).
+
+### Manual install
 
 ```bash
 git clone https://github.com/likithtech2006-pixel/launch-lab.git
 mkdir -p ~/.claude/skills && cp -r launch-lab/skills/launch-lab ~/.claude/skills/
 ```
-
-Then open Claude Code in any repo and run `/launch-lab`.
 
 ## Commands
 
@@ -56,8 +53,15 @@ key sentences had landed just below the fold. [Full write-up, reports and raw pe
 
 ## Launch Lab on itself
 
-In progress: the clean install test of this README passes (3/3 steps in an isolated temp HOME); the
-Stranger Panel score and before/after card for this README will be published here.
+<p align="center"><img src="launch/score-card.svg" alt="Launch Lab's own Star Readiness Score: 87 before, 90 after one round of fixes" width="720"></p>
+
+This README was run through Launch Lab before publishing: **87 → 90** after one round
+([report](launch/report.md), [diff](launch/readme.round1.patch)). The install test passed 3/3 steps in an
+isolated HOME. All 6 simulated visitors across both rounds described the project correctly, and none would
+star it yet. Once the README was clear, their objection was the same every time: *show that this works on
+real launches.* README edits can't fix that, so the loop stopped at round 1. Real launch data will
+(`/launch-lab diagnose`). Running it on itself also found and fixed four bugs in the scanner (see the
+[changelog](CHANGELOG.md)).
 
 ## How it works
 
@@ -119,6 +123,12 @@ plus simulated first impressions. Its value is the ranked fixes and the before/a
 
 **Are simulated personas meaningful?** They catch the same things a cold reader does: vague taglines,
 missing install lines, unanswered "why not X?". They are not real users; use them before you ask real people.
+
+**How is this different from pasting my README into Claude?** Three things a chat review does not do:
+each visitor sees *only* what a stranger sees before scrolling (and never your source), your install steps are
+actually executed in a clean environment, and the result is a repeatable score with the same weights every run,
+so you can compare before and after. The scanning, install test and scoring are plain Python; only the
+visitors' reading and the grading against your repo's real purpose use Claude.
 
 **Does it need Docker?** No. Without Docker you can approve a local run in an isolated temp directory, or use
 static mode, which checks the instructions without running them.

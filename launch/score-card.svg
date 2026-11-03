@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="380" viewBox="0 0 720 380" role="img" aria-label="Star Readiness Score 90 out of 100">
+<style>
+  .bg { fill: #ffffff; stroke: #d0d7de; } .title { fill: #1f2328; font: 600 18px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .lbl { fill: #1f2328; font: 13px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .val { fill: #59636e; font: 600 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .small { fill: #59636e; font: 12px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .big { fill: #1f2328; font: 700 44px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .track { fill: #eaeef2; } .prev { fill: #8c959f; } .ring { stroke: #eaeef2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; stroke: #30363d; } .title, .lbl, .big { fill: #e6edf3; } .val, .small { fill: #9198a1; }
+    .track { fill: #21262d; } .ring { stroke: #21262d; } .prev { fill: #6e7681; }
+  }
+</style>
+<rect x="0.5" y="0.5" width="719" height="379" rx="12" class="bg"/>
+<text x="24" y="38" class="title">Launch Lab · launch-lab</text>
+<circle cx="120" cy="170" r="70" fill="none" stroke-width="14" class="ring"/>
+<circle cx="120" cy="170" r="70" fill="none" stroke="#1a7f37" stroke-width="14" stroke-linecap="round"
+  stroke-dasharray="395.8 439.8" transform="rotate(-90 120 170)"/>
+<text x="120" y="185" text-anchor="middle" class="big">90</text>
+<text x="120" y="210" text-anchor="middle" class="small">/ 100</text>
+<text x="120" y="282" text-anchor="middle" class="small">before 87  →  after 90</text>
+<text x="290" y="75" class="lbl">Clarity (Stranger Panel)</text>
+<rect x="530" y="65" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="65" width="103" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="80" width="103" height="4" rx="2" class="prev"/>
+<text x="660" y="75" class="val">25/30</text>
+<text x="290" y="105" class="lbl">Clean install</text>
+<rect x="530" y="95" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="95" width="125" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="110" width="125" height="4" rx="2" class="prev"/>
+<text x="660" y="105" class="val">15/15</text>
+<text x="290" y="135" class="lbl">Time to first success</text>
+<rect x="530" y="125" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="125" width="125" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="140" width="125" height="4" rx="2" class="prev"/>
+<text x="660" y="135" class="val">10/10</text>
+<text x="290" y="165" class="lbl">Demo</text>
+<rect x="530" y="155" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="155" width="125" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="170" width="125" height="4" rx="2" class="prev"/>
+<text x="660" y="165" class="val">10/10</text>
+<text x="290" y="195" class="lbl">Quickstart length</text>
+<rect x="530" y="185" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="185" width="88" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="200" width="88" height="4" rx="2" class="prev"/>
+<text x="660" y="195" class="val">6/8</text>
+<text x="290" y="225" class="lbl">Description, topics, license, badges</text>
+<rect x="530" y="215" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="215" width="125" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="230" width="125" height="4" rx="2" class="prev"/>
+<text x="660" y="225" class="val">10/10</text>
+<text x="290" y="255" class="lbl">Comparison with alternatives</text>
+<rect x="530" y="245" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="245" width="125" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="260" width="125" height="4" rx="2" class="prev"/>
+<text x="660" y="255" class="val">7/7</text>
+<text x="290" y="285" class="lbl">Social preview image</text>
+<rect x="530" y="275" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="275" width="62" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="290" width="2" height="4" rx="2" class="prev"/>
+<text x="660" y="285" class="val">2/5</text>
+<text x="290" y="315" class="lbl">Contributing guide</text>
+<rect x="530" y="305" width="125" height="12" rx="6" class="track"/>
+<rect x="530" y="305" width="125" height="12" rx="6" fill="#1a7f37" opacity="0.85"/>
+<rect x="530" y="320" width="125" height="4" rx="2" class="prev"/>
+<text x="660" y="315" class="val">5/5</text>
+<rect x="290" y="350" width="10" height="4" rx="2" transform="translate(0 3)" class="prev"/><text x="306" y="359" class="small">before</text><rect x="360" y="350" width="10" height="10" rx="5" fill="#1a7f37"/><text x="376" y="359" class="small">after</text>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "title": "launch-lab",
+  "cols": 50, "rows": 13, "scale": 4, "prompt": "", "typing_ms": 10, "end_hold_ms": 100,
+  "steps": [
+    {"type": "output", "text": "{b}Launch Lab{/}\n\n{d}Other tools write your launch.{/}\nLaunch Lab tests whether it\nwill work, {g}before you post.{/}\n\n{g}✓{/} 3 simulated first-time visitors\n{g}✓{/} clean install test\n{g}✓{/} 0-100 Star Readiness Score\n{g}✓{/} ranked fixes, then a retest", "line_ms": 10}
+  ]
+}
